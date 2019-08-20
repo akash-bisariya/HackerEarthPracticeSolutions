@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 
 public class NeutralisationOfCharges {
     /**
+     * Problem Link - https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/charges-repel/
+     *
      * In a parallel universe, there are not just two charges like positive and negative, but there are  charges represented by   english alphabets.
      *
      * Charges have a property of killing each other or in other words neutralizing each other if they are of same charge and next to each other.

@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 
 public class PepperAndContiguousEvenSubArray {
     /**
+     * Problem Link - https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/pepper-and-contiguous-even-subarray-9f3adf65/
+     *
      * This is a DEBUGGING question.
      *
      * You have an array of length N. A subarray is called Interesting if it contains only even numbers. You have to  find the maximum length of such Interesting subarray.
@@ -49,7 +51,7 @@ public class PepperAndContiguousEvenSubArray {
             for(int j=0;j<size;j++){
                 if(Integer.parseInt(arr[j])%2==0){
                     count++;
-                    answer=count;
+                    if(answer<count)answer=count;
                 }
                 else
                     count=0;
