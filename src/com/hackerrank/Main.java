@@ -1,9 +1,6 @@
 package com.hackerrank;
 
-import com.hackerrank.practices.ChargedUpArray;
-import com.hackerrank.practices.NotInRange;
-import com.hackerrank.practices.PepperAndContiguousEvenSubArray;
-import com.hackerrank.practices.PolygonPossibility;
+import com.hackerrank.practices.*;
 
 import java.io.IOException;
 
@@ -15,8 +12,9 @@ public class Main {
 //        NeutralisationOfCharges.startSolution();
 //        PepperAndContiguousEvenSubArray.startSolution();
 //        NotInRange.startSolution();
-        PolygonPossibility.startSolution();
+//        PolygonPossibility.startSolution();
 
+        MonkAndPowerOfTime.startSolution();
     }
 }
 
