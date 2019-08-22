@@ -14,7 +14,9 @@ public class Main {
 //        NotInRange.startSolution();
 //        PolygonPossibility.startSolution();
 
-        MonkAndPowerOfTime.startSolution();
+//        MonkAndPowerOfTime.startSolution();
+
+        EEDCLab.startSolution();;
     }
 }
 
