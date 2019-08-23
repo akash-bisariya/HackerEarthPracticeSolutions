@@ -75,16 +75,34 @@ public class EEDCLab {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int size = Integer.parseInt(br.readLine());
         String[] arr = br.readLine().split(" ");
+        StringBuilder totalsum;
+
+        int[] tempArray = new int[size];
+        for(int i=0;i<tempArray.length;i++){
+            int count=0;
+            StringBuilder leftNum = getLeftNumber(arr, i).reverse();
+            StringBuilder rightNum =  getRightNumber(arr, i).reverse();
+            if(leftNum.length()>rightNum.length())
+                totalsum = addNumbers(leftNum,rightNum);
+            else
+                totalsum = addNumbers(rightNum,leftNum);
+
+            if ((totalsum.charAt(totalsum.length()-1)-'0')%2==0 && checkIfDivBy3(totalsum) && (totalsum.charAt(totalsum.length()-1)-'0'==5 || totalsum.charAt(totalsum.length()-1)-'0'==0) ) {
+                count++;
+            }
+            tempArray[i]=count;
+        }
+
+
         int queries = Integer.parseInt(br.readLine());
-        long total = 0;
+
         for (int i = 0; i < queries; i++) {
             String[] qr = br.readLine().split(" ");
             int l = Integer.parseInt(qr[0]) - 1;
             int r = Integer.parseInt(qr[1]) - 1;
             int count=0;
             while (l <= r) {
-                total = getLeftNumber(arr, l) + getRightNumber(arr, l);
-                if (total % 2 == 0 && total % 3 == 0 && total % 5 == 0) {
+                if (tempArray[l]==1) {
                     count++;
                 }
                 l++;
@@ -93,28 +111,60 @@ public class EEDCLab {
         }
     }
 
-    private static long getLeftNumber(String[] arr, int l) {
+
+    private static boolean checkIfDivBy3(StringBuilder totalSum) {
+        long sumOfDigit=0;
+        for(int i=0;i<totalSum.length();i++){
+            sumOfDigit =sumOfDigit + totalSum.charAt(i)-'0';
+        }
+        return sumOfDigit % 3 == 0;
+    }
+
+    private static StringBuilder getLeftNumber(String[] arr, int l) {
         StringBuilder num = new StringBuilder();
         if (l == 0)
-            return 0;
+            return new StringBuilder("0");
         else {
             for (int i = 0; i < l; i++) {
                 num.append(arr[i]);
             }
         }
-        return Long.parseLong(num.toString());
+        return num;
     }
 
-    private static long getRightNumber(String[] arr, int l) {
+    private static StringBuilder getRightNumber(String[] arr, int l) {
         StringBuilder num = new StringBuilder();
         if (l >= arr.length-1)
-            return 0;
+            return new StringBuilder("0");
         else {
             for (int i = l + 1; i < arr.length; i++) {
                 num.append(arr[i]);
             }
         }
-        return Long.parseLong(num.toString());
+        return num;
     }
 
+    private static StringBuilder addNumbers(StringBuilder firstNum, StringBuilder secondNum) {
+        StringBuilder sumString= new StringBuilder();
+        int savedCarry=0;
+        for(int i=0;i<secondNum.length();i++){
+            int actualSum  = (firstNum.charAt(i)-'0')+(secondNum.charAt(i)-'0')+savedCarry;
+            int savedSum = actualSum%10;
+            savedCarry = actualSum/10;
+            sumString.append(savedSum);
+        }
+
+        for(int j=secondNum.length();j<=firstNum.length()-1;j++){
+            int actualSum  = (firstNum.charAt(j)-'0')+savedCarry;
+            int savedSum = actualSum%10;
+            savedCarry = actualSum/10;
+            sumString.append(savedSum);
+        }
+
+        if(savedCarry>0){
+            sumString.append(savedCarry);
+        }
+
+        return sumString.reverse();
+    }
 }
