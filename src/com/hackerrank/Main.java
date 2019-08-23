@@ -24,8 +24,9 @@ public class Main {
 
 //        AddLargeNumbers.startSolution();
 
-        EEDCLab.startSolution();
+//        EEDCLab.startSolution();
 
+        MaximumOfSubarrays.startSolution();
 
     }
 }
