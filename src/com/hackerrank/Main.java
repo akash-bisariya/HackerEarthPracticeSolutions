@@ -29,8 +29,9 @@ public class Main {
 
 //        MaximumOfSubarrays.startSolution();
 
-        new ModifySequence().startSolution();
+//        new ModifySequence().startSolution();
 
+        new MonkAndRotation().startSolution();
     }
 }
 
