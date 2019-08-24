@@ -1,6 +1,7 @@
 package com.hackerrank;
 
 import com.hackerrank.practices.*;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 
 import java.io.IOException;
 
@@ -26,7 +27,9 @@ public class Main {
 
 //        EEDCLab.startSolution();
 
-        MaximumOfSubarrays.startSolution();
+//        MaximumOfSubarrays.startSolution();
+
+        new ModifySequence().startSolution();
 
     }
 }
