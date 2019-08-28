@@ -1,7 +1,6 @@
 package com.hackerrank;
 
 import com.hackerrank.practices.*;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 
 import java.io.IOException;
 
@@ -31,7 +30,16 @@ public class Main {
 
 //        new ModifySequence().startSolution();
 
-        new MonkAndRotation().startSolution();
+//        new MonkAndRotation().startSolution();
+
+//        new DistributionOfToys().startSolution();
+
+//        new DistributionOfToysFinalAccepted().startNewSolution();
+
+        new DistributionOfToysFinalAccepted().startSolution();
+
+
     }
+
 }
 
