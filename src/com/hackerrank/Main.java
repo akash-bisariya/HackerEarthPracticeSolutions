@@ -36,7 +36,9 @@ public class Main {
 
 //        new DistributionOfToysFinalAccepted().startNewSolution();
 
-        new DistributionOfToysFinalAccepted().startSolution();
+//        new DistributionOfToysFinalAccepted().startSolution();
+
+        new HealthOfAPerson().startSolution();
 
 
     }
