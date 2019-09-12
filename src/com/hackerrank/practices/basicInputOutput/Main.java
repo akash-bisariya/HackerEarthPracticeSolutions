@@ -10,8 +10,12 @@ public class Main {
 
 //        new PrimeNumber().startSolution();
 
-        new SeatingArrangement().startSolution();
+//        new SeatingArrangement().startSolution();
+
+        new Anagrams().startSolution();
+
     }
+
 
 
 }
