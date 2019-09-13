@@ -22,6 +22,7 @@ public class Anagrams implements IPracticeSolution {
         int testCases = Integer.parseInt(bufferedReader.readLine());
 
         for(int i=0;i<testCases;i++){
+
             int count=0;
             int[] array = new int[26];
             String firstString = bufferedReader.readLine();
@@ -35,16 +36,13 @@ public class Anagrams implements IPracticeSolution {
                 array[((int)secondString.charAt(j))-'a']++;
             }
 
-            for(int j=0;j<array.length;j++){
-                count =count + Math.abs(array[j]);
+            for (int value : array) {
+                count = count + Math.abs(value);
             }
 
             System.out.println(count);
 
         }
-
-
-
 
     }
 }

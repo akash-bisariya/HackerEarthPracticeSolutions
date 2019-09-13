@@ -12,8 +12,11 @@ public class Main {
 
 //        new SeatingArrangement().startSolution();
 
-        new Anagrams().startSolution();
+//        new Anagrams().startSolution();
 
+//        new PalindromicString().startSolution();
+
+        new FindProduct().startSolution();
     }
 
 
