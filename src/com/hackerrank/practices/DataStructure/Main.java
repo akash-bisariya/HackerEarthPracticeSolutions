@@ -49,7 +49,12 @@ public class Main {
 //        new PrintDiagonalArray().startSolution();
 
 
-        new MarkTheAnswer().startSolution();
+//        new MarkTheAnswer().startSolution();
+
+//        new TwoArrays().startSolution();
+
+        new MaximumGoodness().startSolution();
+
     }
 
 
