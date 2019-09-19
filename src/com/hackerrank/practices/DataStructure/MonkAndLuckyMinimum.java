@@ -1,4 +1,4 @@
-package com.hackerrank.practices.basicInputOutput;
+package com.hackerrank.practices.DataStructure;
 
 import com.hackerrank.practices.DataStructure.IPracticeSolution;
 

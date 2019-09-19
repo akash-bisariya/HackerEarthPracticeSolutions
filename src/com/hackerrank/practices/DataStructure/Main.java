@@ -46,7 +46,10 @@ public class Main {
 
 //        new SpecialtyOfSequence().startSolution();
 
-        new PrintDiagonalArray().startSolution();
+//        new PrintDiagonalArray().startSolution();
+
+
+        new MarkTheAnswer().startSolution();
     }
 
 
